@@ -1,0 +1,60 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+.card-header {
+    background-color: #0071C3;
+    color: white;
+    border-bottom: none;
+    padding: 1.5rem;
+}
+.card-header h3 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.card-body {
+    padding: 2rem;
+}
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+.form-control, .form-select {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #0071C3;
+    box-shadow: 0 0 0 0.2rem rgba(0, 113, 195, 0.25);
+}
+.btn-primary {
+    background-color: #0071C3;
+    border-color: #0071C3;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.btn-primary:hover {
+    background-color: #005a9e;
+    border-color: #005a9e;
+    transform: translateY(-2px);
+}
+.input-group-text {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 10px 0 0 10px;
+}

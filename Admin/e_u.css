@@ -1,0 +1,34 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.card-header {
+    background-color: #0071C3;
+    color: white;
+    border-radius: 15px 15px 0 0;
+    padding: 1.5rem;
+}
+.form-label {
+    font-weight: 500;
+}
+.btn-primary {
+    background-color: #0071C3;
+    border-color: #0071C3;
+}
+.btn-primary:hover {
+    background-color: #005194;
+    border-color: #005194;
+}
+.form-control, .form-select {
+    border-radius: 10px;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #0071C3;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}

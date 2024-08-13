@@ -1,0 +1,229 @@
+:root {
+    --primary-color: #0071C3;
+    --secondary-color: #2980b9;
+    --background-color: #ecf0f1;
+    --text-color: #333;
+    --hover-color: #e8f4f8;
+    --sidebar-width: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar-menu a:hover {
+    background-color: #005091;
+    transform: translateY(-2px);
+}
+
+.container {
+    display: flex;
+    margin-top: 60px;
+    min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.sidebar-menu a {
+    display: block;
+    color: var(--text-color);
+    padding: 12px 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.sidebar-menu a:hover {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.sidebar-menu i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.content h1 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2em;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.summary-section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+select, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #005194;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.results-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    text-align: center; /* จัดให้ข้อความใน th และ td อยู่ตรงกลาง */
+    padding: 8px;
+}
+thead {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tfoot th {
+    text-align: right;
+    background-color: #f2f2f2;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        transform: translateX(-100%);
+        position: fixed;
+        height: 100%;
+        z-index: 999;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    .content {
+        margin-left: 0;
+    }
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    select, button {
+        width: 100%;
+    }
+}
+
+.table-container {
+    position: relative;
+}
+
+.total-sum {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e0f7fa !important; /* สีฟ้าอ่อน */
+    padding: 5px;
+    font-weight: bold; /* ทำให้ข้อความเป็นตัวหนา */
+    border-radius: 4px; /* ทำมุมของกรอบให้กลมมน */
+    z-index: 10; /* ตั้งค่า z-index ให้อยู่บนสุด */
+}
+
+.logo-navbar {
+    width: 115px; /* กำหนดความกว้างที่ต้องการ */
+    height: auto; /* คงสัดส่วนของภาพ */
+    max-width: 100%; /* เพื่อให้ขนาดของโลโก้ไม่ใหญ่เกินกว่าพื้นที่ที่มี */
+}
+
+
+
